@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="/umrkosh/">
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Which vegetables should not be refrigerated, and which fruits and vegetables must not be stored together — read off one named USDA handbook, with the source quoted. Plus a blank column for your own holding days, because no book knows how long produce lasts on your cart. Free, private, no third-party request. This demo stores nothing.">
+
+  <meta property="og:title" content="Which vegetables should not be refrigerated — umrkosh">
+  <meta property="og:description" content="Chilling-injury and do-not-stack facts cited to USDA Agriculture Handbook 66, with Indian market names. The chilling half is for anyone with a fridge or an ice box; the do-not-stack half needs no cold storage at all. The holding-days column is left blank on purpose for you to fill in.">
+  <meta property="og:type" content="website">
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="umrkosh">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="icon" type="image/png" href="favicon.png"/>
+  <title>Which Vegetables Should Not Be Refrigerated — and What Not to Store Together | umrkosh</title>
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    :root { color-scheme: light dark; }
+    body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+      font-feature-settings: "tnum"; }
+    #seo-landing { max-width: 780px; margin: 0 auto; padding: 24px 20px 8px; line-height: 1.55;
+      color: #1E241B; background: #F4F6EF; }
+    #seo-landing h1 { font-size: 1.5rem; color: #4C6321; margin: 0 0 10px; line-height: 1.25; }
+    #seo-landing h2 { font-size: 1.05rem; margin: 22px 0 6px; }
+    #seo-landing code { background: rgba(0,0,0,0.06); padding: 1px 5px; border-radius: 4px; }
+    #seo-landing table { border-collapse: collapse; width: 100%; font-size: 0.9rem; margin: 8px 0; }
+    #seo-landing th, #seo-landing td { border: 1px solid #6E7A63; padding: 6px 8px; text-align: left; }
+    #seo-landing th { background: #EDEDE8; }
+    #seo-landing .muted { color: #55604C; font-size: 0.9rem; }
+    #seo-landing .ours { background: #EDEDE8; border: 1px dashed #7A7A73; padding: 10px; color: #4A4A46; }
+    #flutter-app { height: 82vh; min-height: 540px; border-top: 3px solid #4C6321; }
+    @media (prefers-color-scheme: dark) {
+      #seo-landing { color: #E8EDE0; background: #171A14; }
+      #seo-landing h1 { color: #A9C97C; }
+      #seo-landing code { background: rgba(255,255,255,0.12); }
+      #seo-landing th, #seo-landing td { border-color: #6B7563; }
+      #seo-landing th { background: #1F2419; }
+      #seo-landing .muted { color: #A3AC97; }
+      #seo-landing .ours { background: #232320; border-color: #77776E; color: #C2C2B8; }
+    }
+  </style>
+
+  <!-- The Flutter canvas is not crawlable, so the facts live in real HTML plus
+       JSON-LD. Everything this page loads is served from this same host: no CDN,
+       no analytics, no font service. The engine's fallback-font URL is pinned
+       below for the same reason. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "umrkosh",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Web, Windows, macOS, Linux, Android, iOS",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+    "description": "A produce storage chart for a stall or cart with no cold room. It records which fruits and vegetables a named USDA handbook lists as taking chilling injury, and which give off or react to ethylene so they must not be stacked together — each with the handbook's own words quoted. The holding-days column ships blank, because no book knows how long produce lasts on your cart."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Which vegetables should not be refrigerated?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Agriculture Handbook 66 records chilling injury for cucumber, eggplant (brinjal), okra, potato, sweetpotato, pumpkin, tomato, bell and chilli pepper, ginger and ridge gourd, among others, and for banana, mango, papaya, guava, avocado, muskmelon, watermelon, pomegranate, pineapple, sweet orange, lemon and lime. umrkosh prints the handbook's own symptom words for each — for cucumber, 'Pitting, water-soaked spots, decay'. It does not print a temperature, because a cart has no cold room and the handbook's figures are written for one." }
+      },
+      {
+        "@type": "Question",
+        "name": "Which fruits and vegetables should not be stored together?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Keep the items that give off ethylene away from the items that react to it. From the handbook's per-commodity chapters: apple, mango and papaya give off ethylene; avocado, banana, guava, muskmelon and tomato both give it off and react to it, so they sit alone; cucumber, okra, spinach, cabbage, carrot, cauliflower, green pea, lettuce, pepper, sweetpotato, watermelon, sweet orange, ridge gourd, snap bean, eggplant and coriander react to it. Ethylene pairing is a rate, not a switch: separating them slows ripening, it does not stop it." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does 'no chilling injury recorded' mean it is safe to refrigerate?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. It means the handbook did not list an injury for that commodity. umrkosh has no value that means 'safe to refrigerate' and it will never tell you to chill anything." }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does umrkosh not show storage temperatures?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Agriculture Handbook 66 is a commercial cold-storage handbook written for controlled rooms. A thela has none of that. Reprinting those figures would lend the app authority it has not earned, so there is no temperature, humidity or shelf-life figure anywhere — not as a column, not in the data, and not inside a citation. The build fails if one appears in a quote." }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is the holding-days column blank?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Because nothing in this app knows how long anything lasts on your cart, in your season, under your cloth. The free produce charts that do fill that column fill it with commercial cold-room figures, which is not the same question. umrkosh leaves it blank and asks one family for one number per item, once. If your sheet is empty, it sorts nothing and says so." }
+      },
+      {
+        "@type": "Question",
+        "name": "What about vegetables the handbook does not cover?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Drumstick (sahjan), bottle gourd (lauki), bitter gourd (karela), curry leaf and fenugreek leaves (methi) are not in Agriculture Handbook 66, and pineapple, lemon and lime are in it with no sentence we could quote for their ethylene behaviour. umrkosh prints those as two SEPARATE groups — 'Not in Handbook 66 at all' (5 of 38 items) and 'In Handbook 66, but no ethylene sentence to quote' (3 of 38) — because they are opposite statements about the source and lemon, lime and pineapple have a cited chilling entry on the same sheet. Neither group makes a do-not-stack pair and neither clears one: absence of a row is not evidence of safety." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <main id="seo-landing">
+    <h1>Which vegetables should not be refrigerated — and which fruits and vegetables must not be stored together</h1>
+
+    <p>umrkosh is a produce storage chart for a stall, a thela, a shop floor or a
+    kitchen. Free ethylene and chilling-injury charts already exist and are worth
+    printing — the UC Davis postharvest compatibility chart and the commercial
+    ethylene guides are one search away, and they cover the same commodity facts.
+    umrkosh differs in three specific ways, and in no others: it prints the Indian
+    market name beside every item, it <strong>names the items it has no fact for</strong>
+    instead of leaving them silently absent, and it deliberately does not print the
+    storage-temperature column those charts lead with, because a cart is not a cold
+    room. The holding-days column is filled with <em>your</em> numbers rather than
+    invented ones.</p>
+
+    <p>It carries two kinds of information and never mixes them. Look for the two
+    colours: <strong>moss green is the book</strong>, <strong>pencil grey is yours</strong>.</p>
+
+    <h2>1. Chilling injury — what a named handbook records</h2>
+    <p>The source is <em>The Commercial Storage of Fruits, Vegetables, and Florist and
+    Nursery Stocks</em>, USDA Agriculture Handbook 66. For each item umrkosh prints the
+    handbook's own <strong>symptom words</strong> and nothing else:</p>
+
+    <table>
+      <thead><tr><th>Item</th><th>What Handbook 66 records</th></tr></thead>
+      <tbody>
+        <tr><td>Cucumber (kheera)</td><td>Pitting, water-soaked spots, decay</td></tr>
+        <tr><td>Okra (bhindi)</td><td>Discoloration, water-soaked areas, pitting, decay</td></tr>
+        <tr><td>Eggplant (baingan)</td><td>Surface scald, alternaria rot, blackening of seeds</td></tr>
+        <tr><td>Potato (aloo)</td><td>Mahogany browning, sweetening</td></tr>
+        <tr><td>Ginger (adrak)</td><td>Softening, tissue breakdown, decay</td></tr>
+        <tr><td>Banana (kela)</td><td>Dull color when ripened</td></tr>
+      </tbody>
+    </table>
+
+    <p class="muted">Notice what is <em>not</em> in that table. The handbook's "Lowest Safe
+    Temperature" column sits immediately to the left of every symptom above, and umrkosh
+    never takes it. Handbook 66 is written for controlled cold rooms in another country;
+    a cart has none. There is no temperature, humidity or shelf-life figure anywhere in
+    this app — not as a column, not as a tooltip, not in the data and
+    <strong>not inside a citation</strong>. The build fails if one appears in a quote.</p>
+
+    <p><strong>"No chilling injury recorded" does not mean "keep it cold."</strong> It
+    means the handbook did not list an injury. umrkosh has no value meaning "safe to
+    refrigerate" and will never tell you to chill anything.</p>
+
+    <h2>2. Do not store together — the ethylene pairs</h2>
+    <p>One item gives off ethylene; another reacts to it and ripens and yellows faster.
+    Keep the two apart in the crate, the cart and the bag. These roles are read from the
+    handbook's <strong>per-commodity chapters</strong>, one quotable sentence per side:</p>
+
+    <table>
+      <thead><tr><th>Gives off ethylene</th><th>Reacts to ethylene</th><th>Both — keep alone</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Apple, Mango, Papaya</td>
+          <td>Cucumber, Okra, Spinach, Cabbage, Carrot, Cauliflower, Green pea, Lettuce, Pepper, Sweetpotato, Watermelon, Sweet orange, Ridge gourd, Snap bean, Eggplant, Pumpkin, Coriander</td>
+          <td>Avocado, Banana, Guava, Muskmelon, Tomato</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="muted"><strong>Who the chilling half is actually for.</strong> A
+    chilling-injury flag only changes what you do if you have somewhere cold to put
+    things — a fridge, an ice box, a cold room. If your stall has none of that, this half
+    of the chart tells you nothing you can act on today; it is the half that matters in a
+    kitchen, and it is the half that free temperate charts get wrong for Indian produce.
+    The do-not-stack half below is the half that needs no cold storage at all.</p>
+
+    <p class="muted">Ethylene pairing is a <em>rate, not a switch</em>. A producer next to
+    a sensitive item makes it ripen and yellow faster; it does not ruin it instantly, and
+    separating them does not stop ripening. Handbook rows are commodity-level — your
+    variety, your season and the day's heat can all move the answer.</p>
+
+    <h2>3. The blank column — your own holding days</h2>
+    <div class="ours">
+      <p><strong>These days are ours. No book, no lab and no app supplied them.</strong>
+      umrkosh ships <strong>zero</strong> holding days. Not a "typical" range, not an
+      average, not a starting point. Nothing in this app knows how long anything lasts on
+      your cart, in your season, under your cloth — so it asks one family for one number
+      per item, once, and then does arithmetic with it.</p>
+    </div>
+
+    <h2>A worked evening</h2>
+    <p>Suppose your own sheet says banana 2 days, tomato 4, spinach 1, potato 12, and you
+    have written nothing for cucumber. Tonight is 4 August 2026 and the floor has five
+    heaps on it:</p>
+
+    <table>
+      <thead><tr><th>Heap</th><th>Came in</th><th>Days old</th><th>Left, by <em>your</em> sheet</th><th>Goes</th></tr></thead>
+      <tbody>
+        <tr><td>Banana</td><td>2 Aug</td><td>2</td><td>0</td><td>Sell tonight</td></tr>
+        <tr><td>Tomato</td><td>2 Aug</td><td>2</td><td>2</td><td>Holds tomorrow</td></tr>
+        <tr><td>Spinach</td><td>4 Aug</td><td>0</td><td>1</td><td>Holds tomorrow</td></tr>
+        <tr><td>Potato</td><td>28 Jul</td><td>7</td><td>5</td><td>Holds beyond tomorrow</td></tr>
+        <tr><td>Cucumber</td><td>3 Aug</td><td>1</td><td>—</td><td>Unsorted — no days on your sheet</td></tr>
+      </tbody>
+    </table>
+
+    <p>The cucumber heap gets <strong>no number at all</strong>, not a zero. A zero would
+    read as "sell tonight", and umrkosh did not earn that. And if your sheet is
+    <em>entirely</em> empty — which is how it ships — no bucket heading is drawn at all;
+    the app says so in one sentence and sorts nothing. The do-not-stack check still runs,
+    because it comes from the book and does not depend on your sheet: with banana and
+    cucumber in the same crate it prints
+    <em>"Banana makes Cucumber ripen faster — keep them apart"</em>.</p>
+
+    <p class="muted"><strong>What this sort is, and what it is not.</strong> It is
+    subtraction of a number you invented, handed back to you. It cannot tell you anything
+    your own sheet did not already say, and it is only as good as your memory of the date
+    each heap came in — a heap entered as arriving today always has its full count left.
+    Sheet B pinned above the crates does the same job with a pencil, which is why the
+    printed sheet, not the screen, is the thing worth having. umrkosh will never dress
+    that arithmetic up as a prediction.</p>
+
+    <h2>What it will not do</h2>
+    <p>No storage temperatures, humidities or shelf-life figures. No spoilage prediction,
+    freshness score or photo detection. <strong>No food-safety claim of any kind</strong>
+    — umrkosh never says anything is safe to eat; if it looks wrong or smells wrong, throw
+    it out whatever any chart says. No prices, mandi rates, weights or margins. No stock
+    register, no credit or udhaar ledger, no staff attendance or salary book. No accounts,
+    no sync and no sharing. The app makes no third-party request: the CanvasKit engine and
+    every font ship with the page, and the renderer's fallback-font URL — which would
+    otherwise point at Google — is pinned to this same host, so a glyph outside the
+    bundled faces renders as a blank box rather than being fetched. Some things families sell every day
+    are simply not in this handbook, and some that are in it carry no sentence umrkosh
+    could quote for one of the two facts. Those are two different silences and it names
+    them separately rather than merging them or guessing.</p>
+
+    <h2>Where the facts come from</h2>
+    <p>One source, named on every card: <em>The Commercial Storage of Fruits, Vegetables,
+    and Florist and Nursery Stocks</em>, USDA Agricultural Research Service, Agriculture
+    Handbook 66 — the chilling-injury table on pp. 63–64 and the per-commodity chapters.
+    Every fact in the app carries the handbook's own sentence, the page it sits on and the
+    date the source was fetched. Tap <em>"Why does it say this?"</em> on any card to read
+    it. Nothing is inferred, nothing is taken by analogy to a related commodity, and
+    nothing comes from a secondary blog.</p>
+
+    <h2>Try it below</h2>
+    <p>The chart below is the real, cited corpus — there is nothing to fake in it. The
+    holding-days sheet is <strong>empty</strong>, exactly as it is in the installed app,
+    so the first thing you see is the true zero-state. Write your own days, print the
+    sheet, stick it on the wall. Nothing you type leaves this page and nothing is saved.</p>
+  </main>
+
+  <div id="flutter-app"></div>
+
+  <script src="flutter.js" defer></script>
+  <!-- buildConfig is injected here at build time from the generated
+       flutter_bootstrap.js (scripts/build-web.sh). Without it the loader throws
+       "requires _flutter.buildConfig" and the app below never mounts. -->
+  <script>window._flutter=window._flutter||{};_flutter.buildConfig = {"engineRevision":"c416acfeb8126e097f758c664aaa3da929e27da0","builds":[{"compileTarget":"dart2js","renderer":"canvaskit","mainJsPath":"main.dart.js"},{}],"useLocalCanvasKit":true};</script>
+  <script>
+    window.addEventListener("load", function () {
+      _flutter.loader.load({
+        config: {
+          hostElement: document.getElementById("flutter-app"),
+          // CONTRACT 3b rule 9. The engine's fallback-font base URL DEFAULTS to
+          // https://fonts.gstatic.com/s/ and is fetched when a glyph is missing
+          // from the bundled fonts (main.dart.js: `s.fontFallbackBaseUrl ...
+          // return s==null?"https://fonts.gstatic.com/s/":s`). Pinned here to a
+          // same-origin path so a missing glyph 404s on this host instead of
+          // making a request to Google. The consequence is stated on the page:
+          // a glyph outside the bundled Latin/Devanagari faces renders as a
+          // blank box rather than being downloaded.
+          fontFallbackBaseUrl: "fallback-fonts/"
+        }
+      });
+    });
+  </script>
+</body>
+</html>
